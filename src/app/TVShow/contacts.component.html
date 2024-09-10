@@ -10,7 +10,7 @@
       @for (movie of tvShowData; track movie) {
            <div class="col-md-2 text-center position-relative">
               <img [src]="$imgPrefix+movie.poster_path" class="w-100 my-3">
-              <h6>{{movie.name}}</h6>
+              <h6>{{movie.title}}</h6>
               <div class="rate bg-danger position-absolute text-center">
                   rate :{{movie.vote_average}}
           </div>
