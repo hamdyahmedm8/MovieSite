@@ -1,0 +1,76 @@
+<div class="jumbotron">
+    <h1 class="display-4">projects!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+    <!-- ingredient-list.component.html -->
+     <table>
+      <thead>
+        <th>name </th>
+        <th>age </th>
+        <th>salary </th>
+        <th> gander</th>
+      </thead>
+      <tbody>
+        <tr >
+        @for (user of users; track user) {
+          <!-- <li>{{ user }}</li> -->
+            <td>{{user}}</td>
+          }</tr>
+          @for (ingredient of newUsers; track ingredient) {
+            <tr>
+            <td>{{ ingredient.name }}</td> 
+            <td>{{ ingredient.age }}</td>
+            <td>{{ ingredient.salary }}</td>
+            <td>{{ ingredient.gander }}</td>
+
+
+          </tr>
+          }
+          
+      </tbody>
+     </table>
+     <!-- ---------------------- -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 m-auto">
+     <table class="table table-striped text-center table-dark">
+      <thead>
+        <tr>
+          <th scope="col">name</th>
+          <th scope="col">age</th>
+          <th scope="col">salary</th>
+          <th scope="col">gander</th>
+          <th scope="col">phone number</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        @for (ingredient of newUsers; track ingredient) {
+          <tr>
+            <td>{{ ingredient.name }}</td> 
+            <td>{{ ingredient.age }}</td>
+            <td>{{ ingredient.salary }}</td>
+            <td>{{ ingredient.gander }}</td>
+            <td>{{ ingredient.phone }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+          </div>
+        </div>
+      </div>
+
+    <!-- --------------- -->
+<ul>
+  @if (isAdmin) {
+    <button>Erase database</button>
+    
+  } @else {
+    <p>You are not authorized.</p>
+  }
+</ul>
+  </div>
