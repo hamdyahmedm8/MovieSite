@@ -2,22 +2,31 @@
 
 
   <div class="row">
-     
-  <div class="col-md-4 d-flex justify-content-center p-0 text-bg-dark align-items-center">
+    <div class="col-md-4 d-flex justify-content-center p-0 text-bg-dark align-items-center">
       <img class="w-100" [src]="$imgPrefix+firstPic" alt="">
       <!-- <h3>trending movies <br> right now </h3> -->
-  </div>
-      @for (movie of moviesData; track movie) {
-           <div class="col-md-2 text-center position-relative">
-              <img [src]="$imgPrefix+movie.poster_path" class="w-100 my-3">
+    </div>
+    @for (movie of moviesData; track movie) {
+      
+      
+      
+      <div id="movies" class="col-md-2 text-center position-relative">
+
+          <a [routerLink]="['/movieDetails',movie.id]">
+
+             <img [src]="$imgPrefix+movie.poster_path" class="w-100 my-3">
               <h6>{{movie.title}}</h6>
-              <div class="rate bg-danger position-absolute text-center">
-                  rate :{{movie.vote_average}}
-          </div>
-                      </div>
-          }
+              <div class="vote bg-danger position-absolute text-center">
+                  {{movie.vote_average}}
+                </div>
+
+            </a>
+          
+          
+             
+            </div>
+      }
   
           
-      
   </div>
 </div>

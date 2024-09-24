@@ -4,10 +4,13 @@ import { RouterLink } from '@angular/router';
 import { HomeComponent } from './tv/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './movies/about.component';
-import{FormsModule} from '@angular/forms';
+import{FormsModule, NgModel} from '@angular/forms';
 import { ContactsComponent } from './TVShow/contacts.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { NgOptimizedImage } from '@angular/common'
+import {ReactiveFormsModule} from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +23,11 @@ import { NgOptimizedImage } from '@angular/common'
     FormsModule,
     ContactsComponent,
     ProjectsComponent,
-    NgOptimizedImage],
+    NgOptimizedImage,
+    ReactiveFormsModule,
+    RegisterComponent,
+    MovieDetailsComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

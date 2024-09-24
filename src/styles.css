@@ -3,3 +3,41 @@ body{
     background-color: black;
     color: white;
 }
+.vote{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background-color: lightcyan;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.topMovies img{
+    height: 90px;
+    border-radius: 20px;
+}
+/* -------a href colors */
+#movies a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  #movies a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  #movies a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  #movies a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+/* end of a href colors */

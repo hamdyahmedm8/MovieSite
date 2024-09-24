@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 form-place">
+            <div *ngIf="err" class="alert alert-danger m-2">
+                {{err}}
+            </div>
+            <form  [formGroup]='registerForm' (ngSubmit)="registerSubmit(registerForm)" class="w-75 m-auto py-4">     
+            <div class="form-group">
+                <label >first name :</label>
+                <input [class.is-invalid]='registerForm.get("first_name")?.invalid == true &&registerForm.get("first_name")?.touched==true'  class='p-2 text-danger' formControlName="first_name" class="form-control" type="text">
+                <span *ngIf='registerForm.get("first_name")?.invalid == true &&registerForm.get("first_name")?.touched==true'  class="p-2 text-danger">
+                    first name is not valid 
+                </span>
+            </div>
+            <!-- last name -->
+            <div class="form-group">
+                <label >last name :</label>
+                <input [class.is-invalid]='registerForm.get("last_name")?.invalid == true && registerForm.get("last_name")?.touched==true'  class='p-2 text-danger' formControlName="last_name" class="form-control" type="text">
+                <span *ngIf='registerForm.get("last_name")?.invalid == true && registerForm.get("last_name")?.touched==true'  class="p-2 text-danger">
+                    last name is not valid
+                 </span>
+            </div>
+            <!-- age -->
+            <div class="form-group">
+                <label >age :</label>
+                <input [class.is-invalid]='registerForm.get("age")?.invalid == true && registerForm.get("age")?.touched==true'  class='p-2 text-danger' formControlName="age" class="form-control" type="number">
+                <span *ngIf='registerForm.get("age")?.invalid == true &&registerForm.get("age")?.touched==true'  class="p-2 text-danger">
+                    age is not valid
+                 </span>
+            </div>
+            <!-- email -->
+            <div class="form-group">
+                <label >email :</label>
+                <input [class.is-invalid]='registerForm.get("email")?.invalid == true && registerForm.get("email")?.touched==true'  class='p-2 text-danger' formControlName="email" class="form-control" type="email">
+                <span *ngIf='registerForm.get("email")?.invalid == true && registerForm.get("email")?.touched==true'  class="p-2 text-danger">
+                    email is not valid
+                 </span>
+            </div>
+            <!-- password -->
+            <div class="form-group">
+                <label >password :</label>
+                <input [class.is-invalid]='registerForm.get("password")?.invalid == true && registerForm.get("password")?.touched==true'  class='p-2 text-danger' formControlName="password" class="form-control" type="password">
+                <span *ngIf='registerForm.get("password")?.invalid == true && registerForm.get("password")?.touched==true'  class="p-2 text-danger">
+                    password is not valid
+                 </span>
+            </div>
+            <button [disabled]="registerForm.invalid==true" class="submit bg-dark text-white my-3">register</button>
+       </form>    
+        </div>
+    </div>
+</div>

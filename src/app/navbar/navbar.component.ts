@@ -10,6 +10,5 @@ import{FormsModule} from '@angular/forms';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  userName2:string="";
 
 }

@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-8 form-place">
+            
+            <div *ngIf="err" class="alert alert-danger m-2">
+                {{err}}
+            </div>
+            <form  [formGroup]='logInForm' (ngSubmit)="logInSubmit(logInForm)" class="w-50 m-auto py-4">     
+          
+            <!-- email -->
+             
+            <div class="form-group">
+                <label >email :</label>
+                <input [class.is-invalid]='logInForm.get("email")?.invalid == true && logInForm.get("email")?.touched==true'  class='p-2 text-danger' formControlName="email" class="form-control" type="email">
+                <span *ngIf='logInForm.get("email")?.invalid == true && logInForm.get("email")?.touched==true'  class="p-2 text-danger">
+                    email is not valid
+                 </span>
+            </div>
+            <!-- password -->
+            <div class="form-group">
+                <label >password :</label>
+                <input [class.is-invalid]='logInForm.get("password")?.invalid == true && logInForm.get("password")?.touched==true'  class='p-2 text-danger' formControlName="password" class="form-control" type="password">
+                <span *ngIf='logInForm.get("password")?.invalid == true && logInForm.get("password")?.touched==true'  class="p-2 text-danger">
+                    password is not valid
+                 </span>
+            </div>
+            <h6 class="my-3"><a routerLinkActive="active" routerLink="/register">register</a> </h6>
+            <button [disabled]="logInForm.invalid==true" class="submit bg-dark text-white my-3">sign in</button>
+       </form>    
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container my-5">
+
+
+    @if(test==true){
+    <div  class="row">
+       <div class="col-md-8">
+        <div class="row">
+             <div class="col-md-8 d-flex justify-content-center p-0 text-bg-dark align-items-center">
+        <img class="w-100 " [src]="$imgPrefix+moviesDetails.backdrop_path" alt="">
+       <br>
+       <!-- <h3>trending movies <br> right now </h3> -->
+    </div>
+    <div class="offset-1 my-3  col-md-3 text-center position-relative">
+        <img [src]="$imgPrefix+moviesDetails.poster_path" class="w-100 my-3">
+        <h6>{{moviesDetails.title}}</h6>
+        <div class="vote bg-danger position-absolute text-center">
+            {{moviesDetails.vote_average}}
+        </div>
+    </div>
+    <h6 class=" mt-3">{{moviesDetails.original_title}}</h6>
+    <p>{{moviesDetails.overview}}</p>
+        </div>
+       </div>
+   
+<div class="topMovies offset-1 col-md-3">
+    <h4>Top Ten movies :</h4>
+    @for (movie of topTen; track movie) {
+        <!-- <a [routerLink]="['/movieDetails2',movie.id]"> -->
+        <img [src]="$imgPrefix+movie.poster_path" class="w-50 my-3">
+        <h6>{{movie.name}}</h6>
+        <li>{{ movie.title }}</li>
+    <!-- </a>   -->
+}
+    <h5></h5>
+</div>
+    
+            
+        
+    </div>}
+  </div>

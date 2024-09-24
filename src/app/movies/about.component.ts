@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {MoviesService} from '../movies.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'about',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })

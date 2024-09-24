@@ -22,4 +22,8 @@ return this._HttpClient.get('https://api.themoviedb.org/3/trending/movie/week?ap
    {
 return this._HttpClient.get('https://api.themoviedb.org/3/trending/person/week?api_key=9e265554f3315b127b1a5d684bb8d104');
    }
+   movieDetails(id:any):Observable<any>
+   {
+return this._HttpClient.get(`https://api.themoviedb.org/3/movie/${id}?api_key=9e265554f3315b127b1a5d684bb8d104`);
+   }
 }
